@@ -70,7 +70,7 @@ project/
 | Name   | Role                        | GitHub |
 |--------|-----------------------------|--------|
 | Palm   | Linked List                 | @kanyapetch21-max |
-| August | Queue & Review System       | @augustt_ag |
+| August | Queue & Review System       | @augusttt_ag |
 | Nano   | Hash Table                  | @sssuwan |
 
 ---
