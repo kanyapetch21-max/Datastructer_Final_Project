@@ -17,3 +17,13 @@ Card* create(char *w, char *m) {
     c->next = NULL;
     return c;
 }
+
+Card* find(Card *head, char *w) {
+    while (head) {
+        if (strcmp(head->word, w) == 0) {
+            return head;
+        }
+        head = head->next;
+    }
+    return NULL;
+}
