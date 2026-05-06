@@ -77,4 +77,4 @@ project/
 
 ### 🔧 Compile
 ```bash
-gcc main.c deck.c queue.c hash.c review.c storage.c ui.c -o vocab
+gcc main.c deck.c queue.c hash.c review.c storage.c ui.c -o anki
