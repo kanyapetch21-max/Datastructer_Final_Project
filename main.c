@@ -48,3 +48,37 @@ int main(void) {
         insertHash(find(deck, "Ambivalent"));
         insertHash(find(deck, "Anomaly"));
     }
+
+    while (1) {
+        menu();
+
+        int c = getInt("Select: ");
+
+        if (c == 1) {
+            review(deck);
+        } else if (c == 2) {
+            addUI(&deck);
+        } else if (c == 3) {
+            deleteUI(&deck);
+        } else if (c == 4) {
+            searchUI(deck);
+        } else if (c == 5) {
+            clear();
+            line();
+            centerText("ALL VOCABULARY");
+            line();
+            showAll(deck);
+            line();
+            pauseScreen();
+        } else if (c == 6) {
+            saveToFile(deck);
+            pauseScreen();
+        } else if (c == 0) {
+            saveToFile(deck);
+            break;
+        }
+    }
+
+    freeAll(deck);
+    return 0;
+}
