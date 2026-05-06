@@ -49,16 +49,7 @@ This ensures difficult words are reviewed more frequently.
 ---
 
 ## 📁 Project Structure
-project/
-│
-├── main.c
-├── deck.c / deck.h # Linked List (vocabulary storage)
-├── queue.c / queue.h # Queue (review system)
-├── hash.c / hash.h # Hash Table (search)
-├── review.c / review.h # Spaced repetition logic
-├── storage.c / storage.h # Save / Load system
-├── ui.c / ui.h # User interface
-└── data.txt # Saved vocabulary (auto-generated)
+project/ │ ├── main.c ├── deck.c / deck.h # Linked List (vocabulary storage) ├── queue.c / queue.h # Queue (review system) ├── hash.c / hash.h # Hash Table (search) ├── review.c / review.h # Spaced repetition logic ├── storage.c / storage.h # Save / Load system ├── ui.c / ui.h # User interface └── data.txt # Saved vocabulary (auto-generated)
 
 
 ---
