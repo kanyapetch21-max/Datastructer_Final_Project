@@ -69,3 +69,44 @@ void deleteCard(Card **head, char *w) {
 
     printf("Not found.\n");
 }
+
+void showAll(Card *deck) {
+    int i = 1;
+    while (deck) {
+        printf("%2d) %-15s = %-25s [%d%%]\n", i++, deck->word, deck->meaning, deck->score);
+        deck = deck->next;
+    }
+
+    if (i == 1) {
+        printf("No words found.\n");
+    }
+}
+
+int count(Card *deck) {
+    int c = 0;
+    while (deck) {
+        c++;
+        deck = deck->next;
+    }
+    return c;
+}
+
+void resetFlag(Card *deck) {
+    while (deck) {
+        deck->flag = 0;
+        deck = deck->next;
+    }
+}
+
+int accuracy(Card *c) {
+    if (!c) return 0;
+    return c->score;
+}
+
+void freeAll(Card *deck) {
+    while (deck) {
+        Card *tmp = deck;
+        deck = deck->next;
+        free(tmp);
+    }
+}
