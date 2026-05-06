@@ -27,3 +27,45 @@ Card* find(Card *head, char *w) {
     }
     return NULL;
 }
+
+void add(Card **head, char *w, char *m) {
+    if (find(*head, w)) {
+        printf("Already exists.\n");
+        return;
+    }
+
+    Card *c = create(w, m);
+
+    if (!*head) {
+        *head = c;
+        return;
+    }
+
+    Card *cur = *head;
+    while (cur->next) {
+        cur = cur->next;
+    }
+    cur->next = c;
+}
+
+void deleteCard(Card **head, char *w) {
+    Card *cur = *head;
+    Card *prev = NULL;
+
+    while (cur) {
+        if (strcmp(cur->word, w) == 0) {
+            if (!prev) {
+                *head = cur->next;
+            } else {
+                prev->next = cur->next;
+            }
+            free(cur);
+            printf("Deleted.\n");
+            return;
+        }
+        prev = cur;
+        cur = cur->next;
+    }
+
+    printf("Not found.\n");
+}
