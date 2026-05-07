@@ -34,3 +34,23 @@ void insertHash(Card *c) {
     n->next = table[idx];
     table[idx] = n;
 }
+
+void deleteHash(const char *word) {
+    int idx = hashFunction(word);
+    HashNode *cur = table[idx];
+    HashNode *prev = NULL;
+
+    while (cur) {
+        if (strcmp(cur->card->word, word) == 0) {
+            if (!prev) {
+                table[idx] = cur->next;
+            } else {
+                prev->next = cur->next;
+            }
+            free(cur);
+            return;
+        }
+        prev = cur;
+        cur = cur->next;
+    }
+}
