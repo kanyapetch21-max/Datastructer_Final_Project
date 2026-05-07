@@ -12,3 +12,25 @@ static int hashFunction(const char *word) {
     }
     return sum;
 }
+
+void initTable(void) {
+    for (int i = 0; i < TABLE_SIZE; i++) {
+        table[i] = NULL;
+    }
+}
+
+void insertHash(Card *c) {
+    if (!c) return;
+
+    int idx = hashFunction(c->word);
+
+    HashNode *n = (HashNode*)malloc(sizeof(HashNode));
+    if (!n) {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
+
+    n->card = c;
+    n->next = table[idx];
+    table[idx] = n;
+}
