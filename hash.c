@@ -54,3 +54,16 @@ void deleteHash(const char *word) {
         cur = cur->next;
     }
 }
+
+Card* searchHash(const char *word) {
+    int idx = hashFunction(word);
+    HashNode *cur = table[idx];
+
+    while (cur) {
+        if (strcmp(cur->card->word, word) == 0) {
+            return cur->card;
+        }
+        cur = cur->next;
+    }
+    return NULL;
+}
