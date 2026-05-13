@@ -60,3 +60,21 @@ void review(Card *deck) {
                 snprintf(buf, sizeof(buf), "WORD: %s", c->word);
                 textLine(buf);
             }
+            line();
+            textLine("Press Enter to reveal...");
+            line();
+            pauseScreen();
+
+            clear();
+            line();
+            centerText("ANSWER");
+            line();
+            {
+                char buf[160];
+                snprintf(buf, sizeof(buf), "WORD: %s", c->word);
+                textLine(buf);
+                snprintf(buf, sizeof(buf), "MEAN: %s", c->meaning);
+                textLine(buf);
+                snprintf(buf, sizeof(buf), "SCORE: %d%%", c->score);
+                textLine(buf);
+            }
