@@ -1,0 +1,30 @@
+Acrimony|bitterness|0
+Adversity|hardship|0
+Aesthetic|beauty|0
+Altruistic|selfless|0
+Amiable|friendly|0
+Animosity|hatred|0
+Apathy|no interest|0
+Arduous|very hard|0
+Assiduous|hardworking|0
+Audacious|bold|0
+Benevolent|kind|0
+Belligerent|aggressive|0
+Capricious|unpredictable|0
+Cognizant|aware|0
+Conundrum|problem|0
+Deleterious|harmful|0
+Diligent|careful|0
+Disparity|difference|0
+Eloquent|fluent|0
+Ephemeral|short-lived|0
+Erudite|scholarly|0
+Exacerbate|worsen|0
+Fastidious|very picky|0
+Fortuitous|lucky|0
+Impeccable|perfect|0
+Impetuous|rash|0
+Juxtapose|compare|0
+Lethargic|lazy|0
+Meticulous|very careful|0
+Pragmatic|practical|0
