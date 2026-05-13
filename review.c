@@ -43,3 +43,20 @@ void review(Card *deck) {
         cur = cur->next;
         idx++;
     }
+
+    for (int s = 0; s < max; s++) {
+        while (!emptyQ(&q[s])) {
+            Node *n = dequeue(&q[s]);
+            Card *c = n->card;
+            free(n);
+
+            clear();
+            line();
+            centerText("FLASHCARD");
+            line();
+
+            {
+                char buf[128];
+                snprintf(buf, sizeof(buf), "WORD: %s", c->word);
+                textLine(buf);
+            }
