@@ -8,6 +8,10 @@
 #define EASY_GAP 3
 #define MEDIUM_GAP 1
 
+static int minInt(int a, int b) {
+    return (a < b) ? a : b;
+}
+
 void review(Card *deck) {
     int total = count(deck);
     if (total == 0) {
