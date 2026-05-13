@@ -23,3 +23,23 @@ void review(Card *deck) {
 
     int sets = (total + SET_SIZE - 1) / SET_SIZE;
     int max = sets + EASY_GAP + 2;
+
+    Queue *q = (Queue*)malloc(sizeof(Queue) * max);
+    if (!q) {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
+
+    for (int i = 0; i < max; i++) {
+        initQ(&q[i]);
+    }
+
+    resetFlag(deck);
+
+    Card *cur = deck;
+    int idx = 0;
+    while (cur) {
+        enqueue(&q[idx / SET_SIZE], cur);
+        cur = cur->next;
+        idx++;
+    }
