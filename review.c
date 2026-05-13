@@ -78,3 +78,58 @@ void review(Card *deck) {
                 snprintf(buf, sizeof(buf), "SCORE: %d%%", c->score);
                 textLine(buf);
             }
+            line();
+            textLine("1) Easy   (+50)");
+            textLine("2) Medium (+25)");
+            textLine("3) Hard   (-75)");
+            textLine("0) Exit");
+            line();
+
+            int ch = getInt("Choose: ");
+
+            if (ch == 0) {
+                for (int i = s; i < max; i++) {
+                    freeQueue(&q[i]);
+                }
+                free(q);
+                return;
+            }
+
+            if (ch == 1) {
+                c->score += 50;
+                if (c->score > 100) c->score = 100;
+
+                int t = s + EASY_GAP;
+                if (t < max) enqueue(&q[t], c);
+            } else if (ch == 2) {
+                c->score += 25;
+                if (c->score > 100) c->score = 100;
+
+                int t = s + MEDIUM_GAP;
+                if (t < max) enqueue(&q[t], c);
+            } else {
+                c->score -= 75;
+                if (c->score < 0) c->score = 0;
+
+                if (c->flag == 0) {
+                    c->flag = 1;
+                    enqueue(&q[s], c);
+                } else {
+                    c->flag = 0;
+                    int t = minInt(s + 1, max - 1);
+                    enqueue(&q[t], c);
+                }
+            }
+        }
+    }
+
+    free(q);
+
+    clear();
+    line();
+    centerText("REVIEW FINISHED");
+    line();
+    textLine("All sets are done.");
+    line();
+    pauseScreen();
+}
