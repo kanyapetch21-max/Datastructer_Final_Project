@@ -13,40 +13,94 @@ int main(void) {
 
     if (!deck) {
         add(&deck, "Acrimony", "bitterness");
-        add(&deck, "Adversity", "hardship");
-        add(&deck, "Aesthetic", "beauty");
-        add(&deck, "Altruistic", "selfless");
-        add(&deck, "Amiable", "friendly");
-        add(&deck, "Animosity", "hatred");
-        add(&deck, "Apathy", "no interest");
-        add(&deck, "Arduous", "very hard");
-        add(&deck, "Assiduous", "hardworking");
-        add(&deck, "Audacious", "bold");
-        add(&deck, "Benevolent", "kind");
-        add(&deck, "Belligerent", "aggressive");
-        add(&deck, "Capricious", "unpredictable");
-        add(&deck, "Cognizant", "aware");
-        add(&deck, "Conundrum", "problem");
-        add(&deck, "Deleterious", "harmful");
-        add(&deck, "Diligent", "careful");
-        add(&deck, "Disparity", "difference");
-        add(&deck, "Eloquent", "fluent");
-        add(&deck, "Ephemeral", "short-lived");
-        add(&deck, "Erudite", "scholarly");
-        add(&deck, "Exacerbate", "worsen");
-        add(&deck, "Fastidious", "very picky");
-        add(&deck, "Fortuitous", "lucky");
-        add(&deck, "Impeccable", "perfect");
-        add(&deck, "Impetuous", "rash");
-        add(&deck, "Juxtapose", "compare");
-        add(&deck, "Lethargic", "lazy");
-        add(&deck, "Meticulous", "very careful");
-        add(&deck, "Pragmatic", "practical");
+        insertHash(find(deck, "Acrimony"));
 
-        insertHash(find(deck, "Aberration"));
-        insertHash(find(deck, "Alleviate"));
-        insertHash(find(deck, "Ambivalent"));
-        insertHash(find(deck, "Anomaly"));
+        add(&deck, "Adversity", "hardship");
+        insertHash(find(deck, "Adversity"));
+
+        add(&deck, "Aesthetic", "beauty");
+        insertHash(find(deck, "Aesthetic"));
+
+        add(&deck, "Altruistic", "selfless");
+        insertHash(find(deck, "Altruistic"));
+
+        add(&deck, "Amiable", "friendly");
+        insertHash(find(deck, "Amiable"));
+
+        add(&deck, "Animosity", "hatred");
+        insertHash(find(deck, "Animosity"));
+
+        add(&deck, "Apathy", "no interest");
+        insertHash(find(deck, "Apathy"));
+
+        add(&deck, "Arduous", "very hard");
+        insertHash(find(deck, "Arduous"));
+
+        add(&deck, "Assiduous", "hardworking");
+        insertHash(find(deck, "Assiduous"));
+
+        add(&deck, "Audacious", "bold");
+        insertHash(find(deck, "Audacious"));
+
+        add(&deck, "Benevolent", "kind");
+        insertHash(find(deck, "Benevolent"));
+
+        add(&deck, "Belligerent", "aggressive");
+        insertHash(find(deck, "Belligerent"));
+
+        add(&deck, "Capricious", "unpredictable");
+        insertHash(find(deck, "Capricious"));
+
+        add(&deck, "Cognizant", "aware");
+        insertHash(find(deck, "Cognizant"));
+
+        add(&deck, "Conundrum", "problem");
+        insertHash(find(deck, "Conundrum"));
+
+        add(&deck, "Deleterious", "harmful");
+        insertHash(find(deck, "Deleterious"));
+
+        add(&deck, "Diligent", "careful");
+        insertHash(find(deck, "Diligent"));
+
+        add(&deck, "Disparity", "difference");
+        insertHash(find(deck, "Disparity"));
+
+        add(&deck, "Eloquent", "fluent");
+        insertHash(find(deck, "Eloquent"));
+
+        add(&deck, "Ephemeral", "short-lived");
+        insertHash(find(deck, "Ephemeral"));
+
+        add(&deck, "Erudite", "scholarly");
+        insertHash(find(deck, "Erudite"));
+
+        add(&deck, "Exacerbate", "worsen");
+        insertHash(find(deck, "Exacerbate"));
+
+        add(&deck, "Fastidious", "very picky");
+        insertHash(find(deck, "Fastidious"));
+
+        add(&deck, "Fortuitous", "lucky");
+        insertHash(find(deck, "Fortuitous"));
+
+        add(&deck, "Impeccable", "perfect");
+        insertHash(find(deck, "Impeccable"));
+
+        add(&deck, "Impetuous", "rash");
+        insertHash(find(deck, "Impetuous"));
+
+        add(&deck, "Juxtapose", "compare");
+        insertHash(find(deck, "Juxtapose"));
+
+        add(&deck, "Lethargic", "lazy");
+        insertHash(find(deck, "Lethargic"));
+
+        add(&deck, "Meticulous", "very careful");
+        insertHash(find(deck, "Meticulous"));
+
+        add(&deck, "Pragmatic", "practical");
+        insertHash(find(deck, "Pragmatic"));
     }
 
     while (1) {
